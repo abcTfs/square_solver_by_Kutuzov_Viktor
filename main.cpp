@@ -7,16 +7,18 @@
 #include "func.cpp"
 
 //main function
-int main()
+
+int main ()
 {
 
-    printf("This programm solves square equations\n (c) Kutuzov Viktor, 2021\n\n");
+    printf ("This programm solves square equations\n (c) Kutuzov Viktor, 2021\n\n");
 
     // Testing my prog
-    AssertTesting();
-    RunUnitTest();
 
-    printf("input your coefficient\nEnter through the space without any signs\n");
+    assert_testing ();
+    run_unit_test ();
+
+    printf ("input your coefficient\nEnter through the space without any signs\n");
 
     //val declaration
 
@@ -26,15 +28,15 @@ int main()
 
     //checking the entered values
 
-    int check = scanf("%lg %lg %lg", &a, &b, &c);
-    checking_val(check);
+    int check = scanf ("%lg %lg %lg", &a, &b, &c);
+    checking_val (check);
 
     //val declaration
 
     double x1 = NAN;
     double x2 = NAN;
 
-    int nRoots = solve_ss( a, b, c, &x1, &x2);
+    int nRoots = solve_ss ( a, b, c, &x1, &x2);
 
     printing_solutions (nRoots, x1, x2);
 
