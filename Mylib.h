@@ -8,7 +8,7 @@
 #include <math.h>
 #include <assert.h>
 
-/*initialisation of functions*/
+/*declaration of functions*/
 
 //  ----------------------------------
 //!  @note This function is checking intered values
@@ -18,7 +18,7 @@
 //!  @return nothing
 //------------------------------------
 
-void checking_val(int quaniti);
+void checking_val (int quaniti);
 
 //  ----------------------------------
 //!  @note fuction for testing solver
@@ -34,7 +34,7 @@ void checking_val(int quaniti);
 //!  @return nothing
 //  ----------------------------------
 
-void UnitTestForSquare(int numb, int qua, double a, double b, double c, double x1ref, double x2ref);
+void unit_test_for_square (int numb, int qua, double a, double b, double c, double x1ref, double x2ref);
 
 //  ----------------------------------
 //!  @note fuction that run unittest
@@ -44,20 +44,20 @@ void UnitTestForSquare(int numb, int qua, double a, double b, double c, double x
 //!  @return nothing
 //  ----------------------------------
 
-void RunUnitTest();
+void run_unit_test ();
 
 //  ----------------------------------
 //!  @note fuction that compares values
 //!
-//!  @param x - the variable, that compared
+//!  @param x - the variable, that compared to
 //!  @param xref - the variable that is compared to
 //!
-//!  @return function returns 1 if variables are equale to
-//!  @return function returns 0 if variables aren't equale to
+//!  @return function returns 1 if variables are equale to each other
+//!  @return function returns 0 if variables aren't equale to each other
 //!
 //  ----------------------------------
 
-int isEqual(double x,double xref);
+int is_Equal (double x, double xref);
 
 //  ----------------------------------
 //!  @note Function, that solves the equal
@@ -65,18 +65,18 @@ int isEqual(double x,double xref);
 //!  @param [in] coef1 - coefficient at x^2
 //!  @param [in] coef2 - coefficient at x
 //!  @param [in] coef3 - coefficient at free-member
-//!  @param [out] *sol1 - the pointer for the first solve
-//!  @param [out] *sol1 - the pointer for the first solve
+//!  @param [out] *sol1 - the pointer for the first solutoin
+//!  @param [out] *sol1 - the pointer for the first solution
 //!
-//!  @return This program returns INF_ROOTS if equal has infiniti number of solves
-//!  @return This program returns NO_ROOTS if equal has no solve
-//!  @return This program returns ONE_ROOT if equal has only one solve
-//!  @return This program returns TWO_ROOTS  if equal has two solves
+//!  @return This program returns INF_ROOTS if equation has infinit number of solutions
+//!  @return This program returns NO_ROOTS if equation has no solutions
+//!  @return This program returns ONE_ROOT if equation has only one solution
+//!  @return This program returns TWO_ROOTS  if equation has two solutions
 //!  @return This program returns  -2 if smth went wrong :)
 //!
 //  ----------------------------------
 
-int solve_ss(double coef1, double coef2, double coef3, double* sol1, double* sol2);
+int solve_ss (double coef1, double coef2, double coef3, double* sol1, double* sol2);
 
 //  ----------------------------------
 //!  @note Assert testing for program
@@ -87,20 +87,7 @@ int solve_ss(double coef1, double coef2, double coef3, double* sol1, double* sol
 //!
 //  ----------------------------------
 
-void AssertTesting();
-
-//  ----------------------------------
-//!
-//!  @note this fuction compares double value to zero
-//!
-//!  @param [in] val - value that need to compare to 0
-//!
-//!  @return true if val = 0
-//!  @return false if val != 0
-//!
-//  ----------------------------------
-
-bool near_to_0(double val);
+void assert_testing ();
 
 //  ----------------------------------
 //!  @note this function is processing of returned data and printing solutions
@@ -118,7 +105,7 @@ void printing_solutions (int numb, double sol1, double sol2);
 
 const double eps = 1e-7;
 
-//!  changing the names of the number of solutions
+//!  changing names of the number of solutions
 
 enum Constants
 {
