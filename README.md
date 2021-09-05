@@ -1,0 +1,1 @@
+# square_solver_by_Kutuzov_Viktor
